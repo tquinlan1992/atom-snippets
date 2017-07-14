@@ -1,15 +1,17 @@
 '.source.js':
-    'angular-app':
+    'angular-module':
         'prefix': 'angular-app'
         'body': """
-        var app = angular.module("${1}", () => [
+        const app = angular.module("${1}", [
         ]);
+
+        module.exports = "${1}"
         """
 
     'angular-app-component':
         'prefix': 'angular-app-component'
         'body': """
-        var app = angular.module("${1}", () => [
+        const app = angular.module("${1}", [
         ]);
 
         app.controller("${1}Controller", () => {
@@ -26,11 +28,10 @@
 
         app.component("${1}Component", {
                 bindings: {
-                    message: '='
                 },
                 template: '<div></div>',
                 controller: function () {
-                    this.message = 'Thomas directive';
+
                 }
         });
 
