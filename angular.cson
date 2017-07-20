@@ -2,6 +2,8 @@
     'angular-module':
         'prefix': 'angular-app'
         'body': """
+        const angular = require("angular");
+        
         const app = angular.module("${1}", [
         ]);
 
