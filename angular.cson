@@ -3,11 +3,11 @@
         'prefix': 'angular-app'
         'body': """
         const angular = require("angular");
-        
+
         const app = angular.module("${1}", [
         ]);
 
-        module.exports = "${1}"
+        module.exports = "${1}";
         """
 
     'angular-app-component':
